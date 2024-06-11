@@ -40,7 +40,7 @@ app.post("/deploy", async (req, res) => {
   publisher.lPush("build-queue", id);
   publisher.hSet("status", id, "uploaded");
 
-  res.json({ message: "Deploying the repository...", id });
+  res.json({ message: "Uploaded the repository...", id });
 });
 
 app.listen(7000, () => {
